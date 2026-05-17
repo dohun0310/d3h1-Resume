@@ -19,3 +19,34 @@ export type Education = {
   period: string;
   description: string;
 }
+
+export type ProjectLink = {
+  label: string;
+  href: string;
+}
+export type Screenshot = {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+export type Contribution = {
+  percent?: number;
+  description: string;
+}
+export type Project = {
+  slug: string;
+  title: string;
+  period: string;
+  role?: string;
+  stack: string[];
+  summary: string;
+  thumbnail: string;
+  highlights?: string[];
+  overview: string;
+  contribution?: Contribution;
+  problem?: string;
+  solution?: string;
+  results?: string[];
+  screenshots?: Screenshot[];
+  links?: ProjectLink[];
+};
