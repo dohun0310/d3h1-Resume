@@ -11,3 +11,11 @@ export type Skill = {
   name: string;
   category: 'language'|'framework'|'tool'|'other';
 }
+
+export type Education = {
+  school: string;
+  major: string;
+  degree: string;
+  period: string;
+  description: string;
+}
