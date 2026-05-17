@@ -57,3 +57,11 @@ export type Experience = {
   period: string;
   bullets: string[];
 }
+
+export type Resume = {
+  profile: Profile;
+  skills: Skill[];
+  education: Education[];
+  projects: Project[];
+  experience: Experience[];
+}
