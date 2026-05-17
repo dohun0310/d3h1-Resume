@@ -6,3 +6,8 @@ export type Profile = {
   title: string;
   introduction: string;
 }
+
+export type Skill = {
+  name: string;
+  category: 'language'|'framework'|'tool'|'other';
+}
