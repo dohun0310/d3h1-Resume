@@ -50,3 +50,10 @@ export type Project = {
   screenshots?: Screenshot[];
   links?: ProjectLink[];
 };
+
+export type Experience = {
+  organization: string;
+  role: string;
+  period: string;
+  bullets: string[];
+}
