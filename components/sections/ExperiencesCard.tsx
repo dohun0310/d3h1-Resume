@@ -29,7 +29,7 @@ export default function ExperiencesCard() {
             {exp.period}
           </p>
 
-          {exp.bullets && (
+          {exp.bullets && exp.bullets.length > 0 && (
             <ul className="list-disc list-inside text-base">
               {exp.bullets.map((bullet, idx) => (
                 <li key={idx}>{bullet}</li>
