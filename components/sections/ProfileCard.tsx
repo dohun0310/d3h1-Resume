@@ -21,7 +21,7 @@ export default function ProfileCard() {
             {profile.name}
           </h1>
 
-          <dl className="grid grid-cols-[auto_1fr] items-center gap-4">
+          <dl className="grid grid-cols-[auto_1fr] items-center gap-x-4 gap-y-2">
             <dt className="flex items-center gap-2 text-gray-500">
               <Mail size={16} />
               <span>이메일</span>
@@ -31,9 +31,7 @@ export default function ProfileCard() {
                 {profile.email}
               </Link>
             </dd>
-          </dl>
 
-          <dl className="grid grid-cols-[auto_1fr] items-center gap-4">
             <dt className="flex items-center gap-2 text-gray-500">
               <svg className="shrink-0" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <g transform="translate(1 1) scale(0.91667)">
@@ -48,9 +46,7 @@ export default function ProfileCard() {
                 <ArrowUpRight size={12} className="stroke-purple-300 inline-block ml-1" />
               </Link>
             </dd>
-          </dl>
 
-          <dl className="grid grid-cols-[auto_1fr] items-center gap-4">
             <dt className="flex items-center gap-2 text-gray-500">
               <Globe size={16} />
               <span>블로그</span>
