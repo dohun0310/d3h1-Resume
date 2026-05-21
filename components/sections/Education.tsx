@@ -18,7 +18,7 @@ export default function EducationCard() {
       {education.map((edu, index) => (
         <div key={index} className="flex flex-col gap-2 not-last:border-b last:border-none border-gray-100 pb-4">
           <div className="flex items-center gap-2">
-            <GraduationCap size={20} />
+            <GraduationCap size={20} aria-hidden="true" />
             <h3 className="text-lg font-semibold">{edu.school}</h3>
           </div>
 
