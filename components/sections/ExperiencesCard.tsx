@@ -29,11 +29,13 @@ export default function ExperiencesCard() {
             {exp.period}
           </p>
 
-          <ul className="list-disc list-inside text-base">
-            {exp.bullets.map((bullet, idx) => (
-              <li key={idx}>{bullet}</li>
-            ))}
-          </ul>
+          {exp.bullets && (
+            <ul className="list-disc list-inside text-base">
+              {exp.bullets.map((bullet, idx) => (
+                <li key={idx}>{bullet}</li>
+              ))}
+            </ul>
+          )}
         </div>
       ))}
     </div>
