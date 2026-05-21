@@ -31,7 +31,7 @@ export default function EducationCard() {
           </p>
 
           {edu.description && (
-            <p>
+            <p className="text-base">
               {edu.description}
             </p>
           )}
