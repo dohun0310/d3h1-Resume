@@ -70,7 +70,7 @@ export default function ProfileCard() {
         />
       </div>
 
-      <blockquote className="border-t border-gray-100">
+      <div className="border-t border-gray-100">
         <div className="flex items-center gap-2 mt-4 text-gray-500">
           <Quote size={16} />
           <span>자기소개</span>
@@ -79,7 +79,7 @@ export default function ProfileCard() {
         <p className="mt-2">
           {profile.introduction}
         </p>
-      </blockquote>
+      </div>
     </div>
   );
 }
