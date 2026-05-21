@@ -9,7 +9,7 @@ export type Profile = {
 
 export type Skill = {
   name: string;
-  category: 'language'|'framework'|'tool'|'other';
+  category: "language" | "framework" | "tool" | "other";
 }
 
 export type Education = {
