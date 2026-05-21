@@ -43,7 +43,7 @@ export type Project = {
   thumbnail: string;
   highlights?: string[];
   overview: string;
-  contribution?: Contribution[];
+  contributions?: Contribution[];
   problem?: string;
   solution?: string;
   results?: string[];
