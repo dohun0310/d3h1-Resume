@@ -108,12 +108,6 @@
   --text-4xl--line-height: 1.2;
   --text-5xl: clamp(2rem, 1.609rem + 1.739vw, 3rem);
   --text-5xl--line-height: 1.1;
-
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
 }
 
 @media (prefers-color-scheme: dark) {
