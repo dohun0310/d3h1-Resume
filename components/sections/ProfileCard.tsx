@@ -66,6 +66,7 @@ export default function ProfileCard() {
           width={120}
           height={160}
           className="object-cover"
+          priority
         />
       </div>
 
