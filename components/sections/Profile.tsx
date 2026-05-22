@@ -4,7 +4,7 @@ import { Mail, Globe, Quote, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { resume } from "@/data/resume";
 
-export default function ProfileCard() {
+export default function Profile() {
   const { profile } = resume;
 
   return (

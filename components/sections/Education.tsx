@@ -2,7 +2,7 @@ import { GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { resume } from "@/data/resume";
 
-export default function EducationCard() {
+export default function Education() {
   const { education } = resume;
 
   if (education.length === 0) {

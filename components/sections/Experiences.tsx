@@ -1,7 +1,7 @@
 import { Building } from "lucide-react";
 import { resume } from "@/data/resume";
 
-export default function ExperiencesCard() {
+export default function Experiences() {
   const { experience } = resume;
 
   if (experience.length === 0) {
