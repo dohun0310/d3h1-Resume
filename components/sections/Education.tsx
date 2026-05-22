@@ -1,5 +1,4 @@
 import { GraduationCap } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { resume } from "@/data/resume";
 
 export default function Education() {
@@ -10,7 +9,7 @@ export default function Education() {
   }
 
   return (
-    <div className={cn("w-full flex flex-col gap-4")}>
+    <div className="w-full flex flex-col gap-4">
       <h2 className="text-2xl font-bold">
         학력
       </h2>

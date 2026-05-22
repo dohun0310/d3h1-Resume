@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Globe, Quote, ArrowUpRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { resume } from "@/data/resume";
 
 export default function Profile() {
   const { profile } = resume;
 
   return (
-    <div className={cn("w-full flex flex-col gap-4")}>
+    <div className="w-full flex flex-col gap-4">
       <div className="w-fit px-4 py-1 rounded-full bg-purple-100">
         <p className="text-sm text-purple-600">
           {profile.title}
