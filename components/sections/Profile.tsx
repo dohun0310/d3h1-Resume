@@ -71,7 +71,7 @@ export default function Profile() {
 
       <div className="border-t border-gray-100">
         <div className="flex items-center gap-2 mt-4 text-gray-500">
-          <Quote size={16} />
+          <Quote size={16} aria-hidden="true" />
           <span>자기소개</span>
         </div>
 
