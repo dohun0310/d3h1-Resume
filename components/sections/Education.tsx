@@ -1,16 +1,11 @@
 import { GraduationCap } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { resume } from "@/data/resume";
 
-export default function EducationCard() {
+export default function Education() {
   const { education } = resume;
 
-  if (education.length === 0) {
-    return null;
-  }
-
   return (
-    <div className={cn("w-full flex flex-col gap-4")}>
+    <div className="w-full flex flex-col gap-4">
       <h2 className="text-2xl font-bold">
         학력
       </h2>
@@ -30,11 +25,9 @@ export default function EducationCard() {
             {edu.period}
           </p>
 
-          {edu.description && (
-            <p className="text-base">
-              {edu.description}
-            </p>
-          )}
+          <p className="text-base">
+            {edu.description}
+          </p>
         </div>
       ))}
     </div>

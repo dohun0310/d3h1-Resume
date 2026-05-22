@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Globe, Quote, ArrowUpRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { resume } from "@/data/resume";
 
-export default function ProfileCard() {
+export default function Profile() {
   const { profile } = resume;
 
   return (
-    <div className={cn("w-full flex flex-col gap-4")}>
+    <div className="w-full flex flex-col gap-4">
       <div className="w-fit px-4 py-1 rounded-full bg-purple-100">
         <p className="text-sm text-purple-600">
           {profile.title}
@@ -72,7 +71,7 @@ export default function ProfileCard() {
 
       <div className="border-t border-gray-100">
         <div className="flex items-center gap-2 mt-4 text-gray-500">
-          <Quote size={16} />
+          <Quote size={16} aria-hidden="true" />
           <span>자기소개</span>
         </div>
 
