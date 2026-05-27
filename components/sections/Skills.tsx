@@ -1,12 +1,13 @@
-import { CodeXml, SquareCode, ToolCase, CircleEllipsis } from "lucide-react";
+import { CodeXml, SquareCode, ToolCase, CircleEllipsis, type LucideIcon } from "lucide-react";
 import { resume } from "@/data/resume";
+import type { Skill } from "@/types/resume";
 
 const SKILL_CATEGORIES = [
   { key: "language", label: "언어", icon: CodeXml },
   { key: "framework", label: "프레임워크", icon: SquareCode },
   { key: "tool", label: "도구", icon: ToolCase },
   { key: "other", label: "기타", icon: CircleEllipsis },
-] as const;
+] as const satisfies readonly { key: Skill["category"]; label: string; icon: LucideIcon }[];
 
 export default function Skills() {
   const { skills } = resume;
