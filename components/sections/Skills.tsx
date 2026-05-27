@@ -11,18 +11,19 @@ const SKILL_CATEGORIES = [
 
 export default function Skills() {
   const { skills } = resume;
+  const groupedSkills = Object.groupBy(skills, (skill) => skill.category);
 
   return (
     <div className="w-full flex flex-col gap-4">
       <h2 className="text-2xl font-bold">
         기술
       </h2>
-      
+
       <div className="flex flex-col gap-4">
         {SKILL_CATEGORIES.map(({ key, label, icon: Icon }) => {
-          const filteredSkills = skills.filter(skill => skill.category === key);
+          const categorySkills = groupedSkills[key];
 
-          if (filteredSkills.length === 0) return null;
+          if (!categorySkills?.length) return null;
 
           return (
             <div key={key} className="flex flex-col gap-2">
@@ -31,7 +32,7 @@ export default function Skills() {
                 <h3 className="text-lg font-semibold">{label}</h3>
               </div>
               <ul className="flex flex-wrap gap-2">
-                {filteredSkills.map((skill, index) => (
+                {categorySkills.map((skill, index) => (
                   <li key={index} className="w-fit px-4 py-1 rounded-full bg-gray-100 text-sm text-gray-600">
                     {skill.name}
                   </li>
