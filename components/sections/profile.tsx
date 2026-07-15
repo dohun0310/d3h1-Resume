@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Globe, Quote, ArrowUpRight } from "lucide-react";
+import { Mail, Globe, ArrowUpRight } from "lucide-react";
 import Badge from "@/components/ui/badge";
 import type { Profile as ProfileType } from "@/lib/types/resume";
 
@@ -63,17 +63,6 @@ export default function Profile({ profile }: { profile: ProfileType }) {
           className="object-cover"
           priority
         />
-      </div>
-
-      <div className="border-t border-gray-100 dark:border-gray-800">
-        <div className="flex items-center gap-2 mt-4 text-gray-700 dark:text-gray-400">
-          <Quote size={16} aria-hidden="true" />
-          <span>자기소개</span>
-        </div>
-
-        <p className="mt-2">
-          {profile.introduction}
-        </p>
       </div>
     </div>
   );
