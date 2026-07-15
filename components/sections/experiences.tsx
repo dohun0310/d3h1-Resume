@@ -1,8 +1,7 @@
 import { Building } from "lucide-react";
-import { resume } from "@/lib/data/resume";
+import type { Experience } from "@/types/resume";
 
-export default function Experiences() {
-  const { experience } = resume;
+export default function Experiences({ experience }: { experience: Experience[] }) {
 
   return (
     <div className="w-full flex flex-col gap-4">

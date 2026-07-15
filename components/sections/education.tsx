@@ -1,8 +1,7 @@
 import { GraduationCap } from "lucide-react";
-import { resume } from "@/lib/data/resume";
+import type { Education as EducationType } from "@/types/resume";
 
-export default function Education() {
-  const { education } = resume;
+export default function Education({ education }: { education: EducationType[] }) {
 
   return (
     <div className="w-full flex flex-col gap-4">

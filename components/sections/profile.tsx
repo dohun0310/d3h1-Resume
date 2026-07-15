@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Globe, Quote, ArrowUpRight } from "lucide-react";
-import { resume } from "@/lib/data/resume";
+import type { Profile as ProfileType } from "@/types/resume";
 
-export default function Profile() {
-  const { profile } = resume;
+export default function Profile({ profile }: { profile: ProfileType }) {
 
   return (
     <div className="w-full flex flex-col gap-4">
