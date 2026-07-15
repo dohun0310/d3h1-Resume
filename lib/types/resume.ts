@@ -3,6 +3,7 @@ export type Profile = {
   email: string;
   github: string;
   blog: string;
+  website: string;
   title: string;
   introduction: string;
 }
