@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Screenshot } from "@/types/resume";
+import type { Screenshot } from "@/lib/types/resume";
 
 export default function ScreenshotGrid({ screenshots }: { screenshots: Screenshot[] }) {
   if (screenshots.length === 0) return null;

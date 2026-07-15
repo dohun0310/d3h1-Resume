@@ -1,5 +1,5 @@
 import { GraduationCap } from "lucide-react";
-import type { Education as EducationType } from "@/types/resume";
+import type { Education as EducationType } from "@/lib/types/resume";
 
 export default function Education({ education }: { education: EducationType[] }) {
 

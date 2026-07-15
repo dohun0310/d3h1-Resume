@@ -1,6 +1,6 @@
 import { CodeXml, SquareCode, ToolCase, CircleEllipsis, type LucideIcon } from "lucide-react";
 import Badge from "@/components/ui/badge";
-import type { Skill } from "@/types/resume";
+import type { Skill } from "@/lib/types/resume";
 
 const SKILL_CATEGORIES = [
   { key: "language", label: "언어", icon: CodeXml },
