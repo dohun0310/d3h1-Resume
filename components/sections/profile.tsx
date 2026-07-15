@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Globe, Quote, ArrowUpRight } from "lucide-react";
-import { resume } from "@/data/resume";
+import { resume } from "@/lib/data/resume";
 
 export default function Profile() {
   const { profile } = resume;
