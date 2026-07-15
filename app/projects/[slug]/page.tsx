@@ -18,9 +18,22 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   if (!project) return {};
 
+  const brandedTitle = `${project.title} | ${resume.profile.name}`;
+
   return {
     title: project.title,
     description: project.summary,
+    openGraph: {
+      title: brandedTitle,
+      description: project.summary,
+      type: "article",
+      locale: "ko_KR",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: brandedTitle,
+      description: project.summary,
+    },
   };
 }
 
