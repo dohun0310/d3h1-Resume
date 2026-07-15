@@ -1,4 +1,5 @@
 import { CodeXml, SquareCode, ToolCase, CircleEllipsis, type LucideIcon } from "lucide-react";
+import Badge from "@/components/ui/badge";
 import type { Skill } from "@/types/resume";
 
 const SKILL_CATEGORIES = [
@@ -31,8 +32,8 @@ export default function Skills({ skills }: { skills: Skill[] }) {
               </div>
               <ul className="flex flex-wrap gap-2">
                 {categorySkills.map((skill, index) => (
-                  <li key={index} className="w-fit px-4 py-1 rounded-full bg-gray-100 text-sm text-gray-600">
-                    {skill.name}
+                  <li key={index}>
+                    <Badge>{skill.name}</Badge>
                   </li>
                 ))}
               </ul>
