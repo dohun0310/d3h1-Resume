@@ -122,3 +122,53 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+@media print {
+  /* PDF 버튼 등 인쇄 제외 요소 */
+  .print-hidden {
+    display: none !important;
+  }
+
+  /* 인쇄는 항상 라이트 톤 (다크모드에서 인쇄해도 강제) */
+  html,
+  body {
+    background: #FFFFFF !important;
+    color-scheme: light;
+  }
+
+  body * {
+    background: transparent !important;
+    color: #383838 !important;
+    border-color: #E8E8E8 !important;
+    box-shadow: none !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #151515 !important;
+  }
+
+  /* bento 그리드를 단일 컬럼으로 */
+  .resume-grid {
+    display: block !important;
+  }
+
+  .resume-grid > * {
+    border: 1px solid #E8E8E8 !important;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    padding: 1rem !important;
+  }
+
+  /* 프로젝트 카드 하단에 상세 경로를 텍스트로 노출 */
+  a[href^="/projects/"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75rem;
+    color: #777777 !important;
+  }
+
+  @page {
+    margin: 1.5cm;
+  }
+}
