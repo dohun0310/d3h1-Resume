@@ -10,17 +10,17 @@ export default function Experiences({ experience }: { experience: Experience[] }
       </h2>
 
       {experience.map((exp, index) => (
-        <div key={index} className="flex flex-col gap-2 border-b last:border-none border-gray-100 pb-4">
+        <div key={index} className="flex flex-col gap-2 border-b last:border-none border-gray-100 dark:border-gray-800 pb-4">
           <div className="flex items-center gap-2">
             <Building size={20} aria-hidden="true" />
             <h3 className="text-lg font-semibold">{exp.organization}</h3>
           </div>
 
-          <p className="text-sm text-gray-700">
+          <p className="text-sm text-gray-700 dark:text-gray-300">
             {exp.role}
           </p>
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-700 dark:text-gray-400">
             {exp.period}
           </p>
 

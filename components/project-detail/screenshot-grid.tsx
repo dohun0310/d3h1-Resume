@@ -18,7 +18,7 @@ export default function ScreenshotGrid({ screenshots }: { screenshots: Screensho
             />
           </div>
           {shot.caption ? (
-            <p className="text-sm text-gray-500 dark:text-gray-400">{shot.caption}</p>
+            <p className="text-sm text-gray-700 dark:text-gray-400">{shot.caption}</p>
           ) : null}
         </li>
       ))}

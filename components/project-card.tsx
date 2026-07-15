@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex flex-col gap-1">
           <h3 className="text-lg font-semibold">{project.title}</h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-gray-700 dark:text-gray-400">
             {project.period}
             {project.role ? ` · ${project.role}` : ""}
           </p>

@@ -19,7 +19,7 @@ export default function Hero({
     <header className="flex flex-col gap-4">
       <div className="flex flex-col gap-2">
         <h1 className="text-4xl font-bold">{title}</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+        <p className="text-sm text-gray-700 dark:text-gray-400">
           {period}
           {role ? ` · ${role}` : ""}
         </p>
