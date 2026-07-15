@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Badge from "@/components/ui/badge";
 import { cn } from "@/lib/utils/cn";
-import type { Project } from "@/types/resume";
+import type { Project } from "@/lib/types/resume";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (

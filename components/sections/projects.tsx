@@ -1,5 +1,5 @@
 import ProjectCard from "@/components/project-card";
-import type { Project } from "@/types/resume";
+import type { Project } from "@/lib/types/resume";
 
 export default function Projects({ projects }: { projects: Project[] }) {
   if (projects.length === 0) return null;

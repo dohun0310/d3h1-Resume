@@ -1,5 +1,5 @@
 import { Building } from "lucide-react";
-import type { Experience } from "@/types/resume";
+import type { Experience } from "@/lib/types/resume";
 
 export default function Experiences({ experience }: { experience: Experience[] }) {
 

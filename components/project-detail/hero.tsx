@@ -1,6 +1,6 @@
 import Badge from "@/components/ui/badge";
 import { buttonClassName } from "@/components/ui/button";
-import type { ProjectLink } from "@/types/resume";
+import type { ProjectLink } from "@/lib/types/resume";
 
 export default function Hero({
   title,

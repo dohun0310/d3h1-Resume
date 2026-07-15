@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Globe, Quote, ArrowUpRight } from "lucide-react";
 import Badge from "@/components/ui/badge";
-import type { Profile as ProfileType } from "@/types/resume";
+import type { Profile as ProfileType } from "@/lib/types/resume";
 
 export default function Profile({ profile }: { profile: ProfileType }) {
 
