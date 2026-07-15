@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Globe, ArrowUpRight } from "lucide-react";
+import { Mail, Globe, FileText, ArrowUpRight } from "lucide-react";
 import Badge from "@/components/ui/badge";
 import type { Profile as ProfileType } from "@/lib/types/resume";
 
@@ -49,6 +49,17 @@ export default function Profile({ profile }: { profile: ProfileType }) {
             <dd className="text-purple-600 hover:underline dark:text-purple-300">
               <Link href={profile.blog} target="_blank" rel="noopener noreferrer">
                 <span>{profile.blog}</span>
+                <ArrowUpRight size={12} className="stroke-purple-300 inline-block ml-1" />
+              </Link>
+            </dd>
+
+            <dt className="flex items-center gap-2 text-gray-700 dark:text-gray-400">
+              <FileText size={16} aria-hidden="true" />
+              <span>이력서</span>
+            </dt>
+            <dd className="text-purple-600 hover:underline dark:text-purple-300">
+              <Link href={profile.website} target="_blank" rel="noopener noreferrer">
+                <span>{profile.website}</span>
                 <ArrowUpRight size={12} className="stroke-purple-300 inline-block ml-1" />
               </Link>
             </dd>
