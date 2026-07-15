@@ -1,5 +1,5 @@
 import { Building } from "lucide-react";
-import { resume } from "@/data/resume";
+import { resume } from "@/lib/data/resume";
 
 export default function Experiences() {
   const { experience } = resume;

@@ -1,5 +1,5 @@
 import { GraduationCap } from "lucide-react";
-import { resume } from "@/data/resume";
+import { resume } from "@/lib/data/resume";
 
 export default function Education() {
   const { education } = resume;

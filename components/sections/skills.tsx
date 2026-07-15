@@ -1,5 +1,5 @@
 import { CodeXml, SquareCode, ToolCase, CircleEllipsis, type LucideIcon } from "lucide-react";
-import { resume } from "@/data/resume";
+import { resume } from "@/lib/data/resume";
 import type { Skill } from "@/types/resume";
 
 const SKILL_CATEGORIES = [
