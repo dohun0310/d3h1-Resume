@@ -1,5 +1,4 @@
 import { CodeXml, SquareCode, ToolCase, CircleEllipsis, type LucideIcon } from "lucide-react";
-import { resume } from "@/lib/data/resume";
 import type { Skill } from "@/types/resume";
 
 const SKILL_CATEGORIES = [
@@ -9,8 +8,7 @@ const SKILL_CATEGORIES = [
   { key: "other", label: "기타", icon: CircleEllipsis },
 ] as const satisfies readonly { key: Skill["category"]; label: string; icon: LucideIcon }[];
 
-export default function Skills() {
-  const { skills } = resume;
+export default function Skills({ skills }: { skills: Skill[] }) {
   const groupedSkills = Object.groupBy(skills, (skill) => skill.category);
 
   return (
