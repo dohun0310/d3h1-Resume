@@ -1,17 +1,11 @@
 import { profile } from "@/lib/data/profile";
+import { skills } from "@/lib/data/skills";
 
 import type { Resume } from "@/lib/types/resume";
 
 export const resume: Resume = {
   profile: profile,
-  skills: [
-    { name: "TypeScript", category: "language" },
-    { name: "JavaScript", category: "language" },
-    { name: "React", category: "framework" },
-    { name: "Next.js", category: "framework" },
-    { name: "Git", category: "tool" },
-    { name: "Figma", category: "tool" },
-  ],
+  skills: skills,
   education: [
     {
       school: "OO대학교",
