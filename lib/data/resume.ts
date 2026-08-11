@@ -1,20 +1,13 @@
 import { profile } from "@/lib/data/profile";
 import { skills } from "@/lib/data/skills";
+import { education } from "@/lib/data/education";
 
 import type { Resume } from "@/lib/types/resume";
 
 export const resume: Resume = {
   profile: profile,
   skills: skills,
-  education: [
-    {
-      school: "OO대학교",
-      major: "컴퓨터공학과",
-      degree: "학사",
-      period: "2021.03 - 2025.02",
-      description: "관련 활동이나 성취를 한 줄로 적습니다.",
-    },
-  ],
+  education: education,
   projects: [
     {
       slug: "example-project",
