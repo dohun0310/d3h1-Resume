@@ -1,16 +1,9 @@
+import { profile } from "@/lib/data/profile";
+
 import type { Resume } from "@/lib/types/resume";
 
 export const resume: Resume = {
-  profile: {
-    name: "홍길동",
-    email: "example@example.com",
-    github: "https://github.com/username",
-    blog: "https://blog.example.com",
-    website: "https://example.com",
-    title: "프론트엔드 개발자",
-    introduction:
-      "여러 줄로 자세하게 작성하는 자기소개입니다.\n첫 문단에서는 본인의 강점과 관심 분야를 소개합니다.\n\n두 번째 문단에서는 어떤 개발자가 되고 싶은지, 어떤 문제를 풀고 싶은지 적습니다.",
-  },
+  profile: profile,
   skills: [
     { name: "TypeScript", category: "language" },
     { name: "JavaScript", category: "language" },
