@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Badge from "@/components/ui/badge";
 import { cn } from "@/lib/utils/cn";
+import { formatPeriod } from "@/lib/utils/period";
 import type { Project } from "@/lib/types/resume";
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -20,6 +21,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             src={project.thumbnail}
             alt={`${project.title} 썸네일`}
             fill
+            loading="eager"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
@@ -30,7 +32,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="flex flex-col gap-1">
           <h3 className="text-lg font-semibold">{project.title}</h3>
           <p className="text-sm text-gray-700 dark:text-gray-400">
-            {project.period}
+            {formatPeriod(project.period)}
             {project.role ? ` · ${project.role}` : ""}
           </p>
         </div>

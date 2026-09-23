@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* 다크모드는 화면에서만 적용하고 인쇄는 항상 라이트 */
+@custom-variant dark (@media screen and (prefers-color-scheme: dark));
+
 :root {
   --background: #FFFFFF;
   --foreground: #151515;
@@ -110,7 +113,7 @@
   --text-5xl--line-height: 1.1;
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   :root {
     --background: #151515;
     --foreground: #FFFFFF;
@@ -124,54 +127,56 @@ body {
 }
 
 @media print {
-  /* PDF 버튼 등 인쇄 제외 요소 */
+  /* 화면 전용 요소(PDF 버튼 등) 인쇄 제외 */
   .print-hidden {
     display: none !important;
   }
 
-  /* 인쇄는 항상 라이트 톤 (다크모드에서 인쇄해도 강제) */
+  /* 페이지 배경을 화면과 같은 gray-50으로 칠함 */
   html,
   body {
-    background: #FFFFFF !important;
-    color-scheme: light;
+    background: #F5F5F5 !important;
   }
 
-  body * {
-    background: transparent !important;
-    color: #383838 !important;
-    border-color: #E8E8E8 !important;
-    box-shadow: none !important;
+  /* 배경색과 이미지를 화면 그대로 인쇄 */
+  *,
+  *::before,
+  *::after {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
   }
 
-  h1,
+  /* 본문 상하 여백을 페이지마다 반복하되, 페이지 경계 여백이 과하지 않도록 인쇄에서는 줄임 */
+  main {
+    padding-block: 2rem !important;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /* 페이지 경계에서 나뉜 상자는 조각마다 테두리·둥근 모서리·안쪽 여백을 다시 그림 */
+  main div,
+  main a,
+  main li,
+  main section {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /* 카드·목록 항목·이미지는 통째로 넘김 (섹션 단위 큰 카드만 페이지 경계에서 나뉨) */
+  main li,
+  main div:has(> img) {
+    break-inside: avoid;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
   h2,
   h3 {
-    color: #151515 !important;
-  }
-
-  /* bento 그리드를 단일 컬럼으로 */
-  .resume-grid {
-    display: block !important;
-  }
-
-  .resume-grid > * {
-    border: 1px solid #E8E8E8 !important;
-    break-inside: avoid;
-    margin-bottom: 1rem;
-    padding: 1rem !important;
-  }
-
-  /* 인쇄 시 배지 배경·테두리 유지 (기술/스택이 구분되도록) */
-  [data-slot="badge"] {
-    background: #F5F5F5 !important;
-    border: 1px solid #E8E8E8 !important;
-    color: #383838 !important;
-  }
-
-  /* 링크 accent 유지 (카드 전체를 감싸는 링크는 제외해 카드 본문색을 보존) */
-  a:not([href^="/projects/"]),
-  a:not([href^="/projects/"]) * {
-    color: #6425B8 !important;
+    break-after: avoid;
   }
 
   /* 프로젝트 모아보기 인쇄: 프로젝트마다 새 페이지 */
@@ -179,14 +184,8 @@ body {
     break-before: page;
   }
 
-  /* 프로젝트 카드 하단에 상세 경로를 텍스트로 노출 */
-  a[href^="/projects/"]::after {
-    content: " (" attr(href) ")";
-    font-size: 0.75rem;
-    color: #777777 !important;
-  }
-
+  /* 용지 여백 대신 본문 여백을 쓰고(여백 영역은 배경이 칠해지지 않음), 용지 크기와 배율은 인쇄 설정을 따름 */
   @page {
-    margin: 1.5cm;
+    margin: 0;
   }
 }

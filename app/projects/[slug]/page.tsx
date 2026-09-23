@@ -48,7 +48,7 @@ export default async function ProjectDetailPage({ params }: Params) {
 
         <Link
           href="/"
-          className="text-sm text-purple-600 hover:underline dark:text-purple-300"
+          className="print-hidden text-sm text-purple-600 hover:underline dark:text-purple-300"
         >
           ← 메인으로 돌아가기
         </Link>

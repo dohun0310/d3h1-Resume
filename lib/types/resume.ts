@@ -30,27 +30,48 @@ export type Screenshot = {
   alt: string;
   caption?: string;
 }
+export type ProjectPeriod = {
+  start: string;
+  end?: string;
+  ongoing?: boolean;
+}
 export type Contribution = {
-  percent?: number;
+  area: string;
+  percent: number;
+  description?: string;
+}
+export type ProjectWork = {
+  title: string;
   description: string;
+}
+export type ProjectChallenge = {
+  title: string;
+  problem: string;
+  solution: string;
+}
+export type CollaborationStep = {
+  title: string;
+  items: string[];
 }
 export type Project = {
   slug: string;
   title: string;
-  period: string;
-  role?: string;
-  stack: string[];
+  period: ProjectPeriod;
   summary: string;
-  thumbnail: string;
-  highlights?: string[];
+  role: string;
   overview: string;
-  contributions?: Contribution[];
-  problem?: string;
-  solution?: string;
+  stack: string[];
+  contributions: Contribution[];
+  works: ProjectWork[];
+  responsibilities?: string[];
+  challenges?: ProjectChallenge[];
   results?: string[];
+  collaboration?: CollaborationStep[];
+  awards?: string[];
+  thumbnail: string;
   screenshots?: Screenshot[];
   links?: ProjectLink[];
-};
+}
 
 export type Experience = {
   organization: string;
