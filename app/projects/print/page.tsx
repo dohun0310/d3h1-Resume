@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { resume } from "@/lib/data/resume";
 import PrintButton from "@/components/print-button";
 import Detail from "@/components/project-detail/detail";
+import PageShell from "@/components/page-shell";
 import { buttonClassName } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export default function ProjectsPrintPage() {
   const { projects } = resume;
 
   return (
-    <div className="min-h-dvh bg-gray-50 font-sans dark:bg-black">
+    <PageShell>
       <div className="print-hidden fixed right-4 top-4 z-50 flex gap-2">
         <Link href="/" className={buttonClassName("ghost", "shadow-lg")}>
           메인으로
@@ -28,6 +29,6 @@ export default function ProjectsPrintPage() {
           </article>
         ))}
       </main>
-    </div>
+    </PageShell>
   );
 }

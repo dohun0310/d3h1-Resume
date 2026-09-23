@@ -5,12 +5,13 @@ export type Profile = {
   blog: string;
   website: string;
   title: string;
+  summary: string;
   introduction: string;
 }
 
 export type Skill = {
   name: string;
-  category: "language" | "framework" | "tool" | "other";
+  category: "language" | "framework" | "tool";
 }
 
 export type Education = {
@@ -49,10 +50,6 @@ export type ProjectChallenge = {
   problem: string;
   solution: string;
 }
-export type CollaborationStep = {
-  title: string;
-  items: string[];
-}
 export type Project = {
   slug: string;
   title: string;
@@ -66,8 +63,6 @@ export type Project = {
   responsibilities?: string[];
   challenges?: ProjectChallenge[];
   results?: string[];
-  collaboration?: CollaborationStep[];
-  awards?: string[];
   thumbnail: string;
   screenshots?: Screenshot[];
   links?: ProjectLink[];
