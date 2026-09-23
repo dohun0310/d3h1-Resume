@@ -72,7 +72,7 @@ export default function Profile({ profile }: { profile: ProfileType }) {
           width={120}
           height={160}
           className="shrink-0 object-cover"
-          priority
+          preload
         />
       </div>
     </div>
