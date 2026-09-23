@@ -21,7 +21,7 @@ export default function Home() {
         </Link>
         <PrintButton />
       </div>
-      <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:py-24 print:py-0">
+      <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:py-24">
         <div className="resume-grid grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-12">
           <Card className="md:col-span-2 lg:col-span-12">
             <Profile profile={profile} />

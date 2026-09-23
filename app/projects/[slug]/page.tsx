@@ -43,7 +43,7 @@ export default async function ProjectDetailPage({ params }: Params) {
 
   return (
     <div className="min-h-dvh bg-gray-50 font-sans dark:bg-black">
-      <main className="mx-auto flex w-full max-w-3xl flex-col gap-12 px-4 py-16 sm:px-6 lg:py-24 print:py-0">
+      <main className="mx-auto flex w-full max-w-3xl flex-col gap-12 px-4 py-16 sm:px-6 lg:py-24">
         <Detail project={project} />
 
         <Link

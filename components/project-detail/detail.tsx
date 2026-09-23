@@ -51,7 +51,6 @@ export default function Detail({
 
                   <div
                     role="progressbar"
-                    data-print="progress-track"
                     aria-label={`${contribution.area} 기여도`}
                     aria-valuenow={percent}
                     aria-valuemin={0}
@@ -59,7 +58,6 @@ export default function Detail({
                     className="h-2 w-full overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800"
                   >
                     <div
-                      data-print="progress-bar"
                       className="h-full rounded-full bg-purple-600 dark:bg-purple-400"
                       style={{ width: `${percent}%` }}
                     />

@@ -21,6 +21,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             src={project.thumbnail}
             alt={`${project.title} 썸네일`}
             fill
+            loading="eager"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />

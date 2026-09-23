@@ -21,7 +21,7 @@ export default function ProjectsPrintPage() {
         <PrintButton />
       </div>
 
-      <main className="mx-auto flex w-full max-w-3xl flex-col gap-16 px-4 py-16 sm:px-6 lg:py-24 print:py-0">
+      <main className="mx-auto flex w-full max-w-3xl flex-col gap-16 px-4 py-16 sm:px-6 lg:py-24">
         {projects.map((project) => (
           <article key={project.slug} className="projects-print-item">
             <Detail project={project} eagerImages />

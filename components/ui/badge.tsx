@@ -20,7 +20,6 @@ export default function Badge({
   return (
     <span
       data-slot="badge"
-      data-variant={variant}
       className={cn(
         "inline-flex w-fit items-center rounded-full px-4 py-1 text-sm",
         badgeVariants[variant],
