@@ -23,5 +23,5 @@ export default function Button({
   className,
   ...props
 }: ButtonHTMLAttributes<HTMLButtonElement> & { variant?: ButtonVariant }) {
-  return <button className={buttonClassName(variant, className)} {...props} />;
+  return <button data-slot="button" className={buttonClassName(variant, className)} {...props} />;
 }

@@ -166,6 +166,20 @@ body {
     background: #F5F5F5 !important;
     border: 1px solid #E8E8E8 !important;
     color: #383838 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* accent 뱃지는 인쇄에서도 보라 톤 유지 */
+  [data-slot="badge"][data-variant="accent"] {
+    background: #ECE2FF !important;
+    border-color: #D8C7FF !important;
+    color: #6425B8 !important;
+  }
+
+  /* 버튼 모양 링크는 배경 대신 테두리로 표시 */
+  [data-slot="button"] {
+    border: 1px solid #D4D4D4 !important;
   }
 
   /* 링크 accent 유지 (카드 전체를 감싸는 링크는 제외해 카드 본문색을 보존) */

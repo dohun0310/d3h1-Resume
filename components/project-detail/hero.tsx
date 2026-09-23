@@ -44,6 +44,7 @@ export default function Hero({
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
+              data-slot="button"
               className={buttonClassName("solid")}
             >
               {link.label}
