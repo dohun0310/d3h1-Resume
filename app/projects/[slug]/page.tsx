@@ -1,18 +1,20 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { resume } from "@/lib/data/resume";
+import { getProject, getProjectSlugs } from "@/lib/data/projects";
+import PageShell from "@/components/page-shell";
+import BackLink from "@/components/back-link";
 import Detail from "@/components/project-detail/detail";
 
 type Params = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return resume.projects.map((project) => ({ slug: project.slug }));
+  return getProjectSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
-  const project = resume.projects.find((p) => p.slug === slug);
+  const project = getProject(slug);
 
   if (!project) return {};
 
@@ -37,22 +39,16 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function ProjectDetailPage({ params }: Params) {
   const { slug } = await params;
-  const project = resume.projects.find((p) => p.slug === slug);
+  const project = getProject(slug);
 
   if (!project) notFound();
 
   return (
-    <div className="min-h-dvh bg-gray-50 font-sans dark:bg-black">
+    <PageShell>
       <main className="mx-auto flex w-full max-w-3xl flex-col gap-12 px-4 py-16 sm:px-6 lg:py-24">
         <Detail project={project} />
-
-        <Link
-          href="/"
-          className="print-hidden text-sm text-purple-600 hover:underline dark:text-purple-300"
-        >
-          ← 메인으로 돌아가기
-        </Link>
+        <BackLink className="print-hidden" />
       </main>
-    </div>
+    </PageShell>
   );
 }

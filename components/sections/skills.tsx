@@ -1,4 +1,4 @@
-import { CodeXml, SquareCode, ToolCase, CircleEllipsis, type LucideIcon } from "lucide-react";
+import { CodeXml, SquareCode, ToolCase, type LucideIcon } from "lucide-react";
 import Badge from "@/components/ui/badge";
 import type { Skill } from "@/lib/types/resume";
 
@@ -6,7 +6,6 @@ const SKILL_CATEGORIES = [
   { key: "language", label: "언어", icon: CodeXml },
   { key: "framework", label: "프레임워크", icon: SquareCode },
   { key: "tool", label: "도구", icon: ToolCase },
-  { key: "other", label: "기타", icon: CircleEllipsis },
 ] as const satisfies readonly { key: Skill["category"]; label: string; icon: LucideIcon }[];
 
 export default function Skills({ skills }: { skills: Skill[] }) {
@@ -31,8 +30,8 @@ export default function Skills({ skills }: { skills: Skill[] }) {
                 <h3 className="text-lg font-semibold">{label}</h3>
               </div>
               <ul className="flex flex-wrap gap-2">
-                {categorySkills.map((skill, index) => (
-                  <li key={index}>
+                {categorySkills.map((skill) => (
+                  <li key={skill.name}>
                     <Badge>{skill.name}</Badge>
                   </li>
                 ))}

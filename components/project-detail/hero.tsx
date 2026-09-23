@@ -1,6 +1,6 @@
 import Badge from "@/components/ui/badge";
 import { buttonClassName } from "@/components/ui/button";
-import { formatPeriod } from "@/lib/utils/period";
+import { formatPeriodAndRole } from "@/lib/utils/period";
 import type { ProjectPeriod, ProjectLink } from "@/lib/types/resume";
 
 export default function Hero({
@@ -12,7 +12,7 @@ export default function Hero({
 }: {
   title: string;
   period: ProjectPeriod;
-  role?: string;
+  role: string;
   stack: string[];
   links?: ProjectLink[];
 }) {
@@ -21,8 +21,7 @@ export default function Hero({
       <div className="flex flex-col gap-2">
         <h1 className="text-4xl font-bold">{title}</h1>
         <p className="text-sm text-gray-700 dark:text-gray-400">
-          {formatPeriod(period)}
-          {role ? ` · ${role}` : ""}
+          {formatPeriodAndRole(period, role)}
         </p>
       </div>
 

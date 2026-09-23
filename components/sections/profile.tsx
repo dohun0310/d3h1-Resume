@@ -38,7 +38,7 @@ export default function Profile({ profile }: { profile: ProfileType }) {
             <dd className="min-w-0 break-all text-purple-600 hover:underline dark:text-purple-300">
               <Link href={profile.github} target="_blank" rel="noopener noreferrer">
                 <span>{profile.github}</span>
-                <ArrowUpRight size={12} className="stroke-purple-300 inline-block ml-1" />
+                <ArrowUpRight size={12} className="stroke-purple-300 inline-block ml-1" aria-hidden="true" />
               </Link>
             </dd>
 
@@ -49,7 +49,7 @@ export default function Profile({ profile }: { profile: ProfileType }) {
             <dd className="min-w-0 break-all text-purple-600 hover:underline dark:text-purple-300">
               <Link href={profile.blog} target="_blank" rel="noopener noreferrer">
                 <span>{profile.blog}</span>
-                <ArrowUpRight size={12} className="stroke-purple-300 inline-block ml-1" />
+                <ArrowUpRight size={12} className="stroke-purple-300 inline-block ml-1" aria-hidden="true" />
               </Link>
             </dd>
 
@@ -60,7 +60,7 @@ export default function Profile({ profile }: { profile: ProfileType }) {
             <dd className="min-w-0 break-all text-purple-600 hover:underline dark:text-purple-300">
               <Link href={profile.website} target="_blank" rel="noopener noreferrer">
                 <span>{profile.website}</span>
-                <ArrowUpRight size={12} className="stroke-purple-300 inline-block ml-1" />
+                <ArrowUpRight size={12} className="stroke-purple-300 inline-block ml-1" aria-hidden="true" />
               </Link>
             </dd>
           </dl>
