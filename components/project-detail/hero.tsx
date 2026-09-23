@@ -1,6 +1,6 @@
 import Badge from "@/components/ui/badge";
 import { buttonClassName } from "@/components/ui/button";
-import type { ProjectLink } from "@/lib/types/resume";
+import type { ProjectPeriod, ProjectLink } from "@/lib/types/resume";
 
 export default function Hero({
   title,
@@ -10,7 +10,7 @@ export default function Hero({
   links,
 }: {
   title: string;
-  period: string;
+  period: ProjectPeriod;
   role?: string;
   stack: string[];
   links?: ProjectLink[];
@@ -20,7 +20,7 @@ export default function Hero({
       <div className="flex flex-col gap-2">
         <h1 className="text-4xl font-bold">{title}</h1>
         <p className="text-sm text-gray-700 dark:text-gray-400">
-          {period}
+          {period.start} - {period.end || (period.ongoing ? "진행 중" : "완료")}
           {role ? ` · ${role}` : ""}
         </p>
       </div>
