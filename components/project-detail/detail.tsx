@@ -2,6 +2,7 @@ import type { Project } from "@/lib/types/resume";
 import Hero from "@/components/project-detail/hero";
 import Section from "@/components/project-detail/section";
 import ScreenshotGrid from "@/components/project-detail/screenshot-grid";
+import BulletList from "@/components/project-detail/bullet-list";
 import Card from "@/components/ui/card";
 
 export default function Detail({
@@ -11,13 +12,10 @@ export default function Detail({
   project: Project;
   eagerImages?: boolean;
 }) {
-  const contributions = project.contributions ?? [];
-  const works = project.works ?? [];
+  const { contributions, works } = project;
   const responsibilities = project.responsibilities ?? [];
   const challenges = project.challenges ?? [];
-  const collaboration = project.collaboration ?? [];
   const results = project.results ?? [];
-  const awards = project.awards ?? [];
   const screenshots = project.screenshots ?? [];
 
   return (
@@ -90,11 +88,7 @@ export default function Detail({
 
       {responsibilities.length > 0 ? (
         <Section title="담당 업무">
-          <ul className="flex list-inside list-disc flex-col gap-1 text-gray-700 dark:text-gray-300">
-            {responsibilities.map((responsibility) => (
-              <li key={responsibility}>{responsibility}</li>
-            ))}
-          </ul>
+          <BulletList items={responsibilities} />
         </Section>
       ) : null}
 
@@ -122,42 +116,13 @@ export default function Detail({
         </Section>
       ) : null}
 
-      {collaboration.length > 0 ? (
-        <Section title="협업 과정">
-          <ol className="flex flex-col gap-4">
-            {collaboration.map((step) => (
-              <li key={step.title} className="flex flex-col gap-2">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200">{step.title}</h3>
-                <ul className="flex list-inside list-disc flex-col gap-1 text-sm text-gray-700 dark:text-gray-300">
-                  {step.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ol>
-        </Section>
-      ) : null}
 
       {results.length > 0 ? (
         <Section title="결과">
-          <ul className="flex list-inside list-disc flex-col gap-1 text-gray-700 dark:text-gray-300">
-            {results.map((result) => (
-              <li key={result}>{result}</li>
-            ))}
-          </ul>
+          <BulletList items={results} />
         </Section>
       ) : null}
 
-      {awards.length > 0 ? (
-        <Section title="수상">
-          <ul className="flex list-inside list-disc flex-col gap-1 text-gray-700 dark:text-gray-300">
-            {awards.map((award) => (
-              <li key={award}>{award}</li>
-            ))}
-          </ul>
-        </Section>
-      ) : null}
 
       {screenshots.length > 0 ? (
         <Section title="스크린샷">
