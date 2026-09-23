@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { resume } from "@/lib/data/resume";
+import { getProject, getProjectSlugs } from "@/lib/data/projects";
 import { OgCard, ogSize, ogContentType, ogFonts } from "@/lib/og";
 import { formatPeriod } from "@/lib/utils/period";
 
@@ -8,7 +8,7 @@ export const contentType = ogContentType;
 export const alt = "프로젝트 상세";
 
 export function generateStaticParams() {
-  return resume.projects.map((project) => ({ slug: project.slug }));
+  return getProjectSlugs().map((slug) => ({ slug }));
 }
 
 export default async function OpengraphImage({
@@ -17,7 +17,7 @@ export default async function OpengraphImage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = resume.projects.find((p) => p.slug === slug);
+  const project = getProject(slug);
 
   return new ImageResponse(
     <OgCard

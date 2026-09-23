@@ -2,6 +2,7 @@ import Link from "next/link";
 import { resume } from "@/lib/data/resume";
 import PrintButton from "@/components/print-button";
 import Card from "@/components/ui/card";
+import PageShell from "@/components/page-shell";
 import { buttonClassName } from "@/components/ui/button";
 import Profile from "@/components/sections/profile";
 import Introduction from "@/components/sections/introduction";
@@ -14,7 +15,7 @@ export default function Home() {
   const { profile, skills, education, experience, projects } = resume;
 
   return (
-    <div className="min-h-dvh bg-gray-50 font-sans dark:bg-black">
+    <PageShell>
       <div className="print-hidden fixed right-4 top-4 z-50 flex gap-2">
         <Link href="/projects/print" className={buttonClassName("ghost", "shadow-lg")}>
           프로젝트 PDF
@@ -43,6 +44,6 @@ export default function Home() {
           </Card>
         </div>
       </main>
-    </div>
+    </PageShell>
   );
 }
