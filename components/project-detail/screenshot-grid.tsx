@@ -8,7 +8,7 @@ export default function ScreenshotGrid({ screenshots }: { screenshots: Screensho
     <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
       {screenshots.map((shot) => (
         <li key={shot.src} className="flex flex-col gap-2">
-          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-gray-100 bg-gray-100 dark:border-gray-800 dark:bg-gray-800">
+          <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-gray-100 bg-gray-100 dark:border-gray-800 dark:bg-gray-800">
             <Image
               src={shot.src}
               alt={shot.alt}
