@@ -1,0 +1,16 @@
+import type { Profile } from "@/lib/types/resume";
+
+export const profile: Profile = {
+  name: "김도훈",
+  email: "dohun0310@naver.com",
+  github: "https://github.com/dohun0310",
+  blog: "https://blog.d3h1.com",
+  website: "https://resume.d3h1.com",
+  title: "프론트엔드 개발자",
+  introduction:
+    `다양한 기술을 활용해 사용자가 실제로 겪는 불편을 해소하는데에 관심이 있습니다. 프론트엔드와 백엔드 구현에 그치지 않고 데이터 수집, API 설계, 배포와 운영까지 서비스의 전 과정을 직접 경험해 왔습니다.
+
+    개발 과정에서 발생한 문제를 임시로 해결하기보다 원인을 분석하고, 테스트와 검증을 통해 안정적으로 개선하는 것을 중요하게 생각합니다. 맡은 일은 끝까지 책임지고 완성하며, 필요한 기술은 직접 배우고 적용하면서 꾸준히 성장하고 있습니다.
+
+    개발 동아리 운영과 팀 프로젝트를 통해 여러 사람의 의견을 조율하고 함께 결과를 만들어 낸 경험이 있습니다. 사용자의 입장에서 문제를 바라보며, 동료들과 지식을 나누고 함께 성장할 수 있는 개발자를 목표로 합니다.`,
+};
