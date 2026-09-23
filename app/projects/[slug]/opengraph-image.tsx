@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { resume } from "@/lib/data/resume";
 import { OgCard, ogSize, ogContentType, ogFonts } from "@/lib/og";
+import { formatPeriod } from "@/lib/utils/period";
 
 export const size = ogSize;
 export const contentType = ogContentType;
@@ -20,7 +21,7 @@ export default async function OpengraphImage({
 
   return new ImageResponse(
     <OgCard
-      eyebrow={project?.period}
+      eyebrow={project ? formatPeriod(project.period) : undefined}
       title={project?.title ?? "프로젝트"}
       description={project?.summary}
     />,
