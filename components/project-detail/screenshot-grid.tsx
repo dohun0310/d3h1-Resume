@@ -21,7 +21,7 @@ export default function ScreenshotGrid({
               fill
               loading={eager ? "eager" : "lazy"}
               className="object-cover"
-              sizes="(max-width: 640px) 100vw, 50vw"
+              sizes="(max-width: 640px) 100vw, 384px"
             />
           </div>
           {shot.caption ? (
