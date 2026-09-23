@@ -179,13 +179,6 @@ body {
     break-before: page;
   }
 
-  /* 프로젝트 카드 하단에 상세 경로를 텍스트로 노출 */
-  a[href^="/projects/"]::after {
-    content: " (" attr(href) ")";
-    font-size: 0.75rem;
-    color: #777777 !important;
-  }
-
   @page {
     margin: 1.5cm;
   }
