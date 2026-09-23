@@ -1,6 +1,7 @@
 import { profile } from "@/lib/data/profile";
 import { skills } from "@/lib/data/skills";
 import { education } from "@/lib/data/education";
+import { experience } from "@/lib/data/experience";
 
 import type { Resume } from "@/lib/types/resume";
 
@@ -39,12 +40,5 @@ export const resume: Resume = {
       ],
     },
   ],
-  experience: [
-    {
-      organization: "OO회사",
-      role: "프론트엔드 인턴",
-      period: "2024.07 - 2024.12",
-      bullets: ["담당한 일 1", "담당한 일 2"],
-    },
-  ],
+  experience: experience,
 };
