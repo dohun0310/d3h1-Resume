@@ -9,8 +9,8 @@ export default function Education({ education }: { education: EducationType[] })
         학력
       </h2>
       
-      {education.map((edu, index) => (
-        <div key={index} className="flex flex-col gap-2 border-b last:border-none border-gray-100 dark:border-gray-800 pb-4">
+      {education.map((edu) => (
+        <div key={edu.school} className="flex flex-col gap-2 border-b last:border-none border-gray-100 dark:border-gray-800 pb-4">
           <div className="flex items-center gap-2">
             <GraduationCap size={20} aria-hidden="true" />
             <h3 className="text-lg font-semibold">{edu.school}</h3>
