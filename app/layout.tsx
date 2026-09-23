@@ -13,8 +13,7 @@ const pretendard = localFont({
 const { profile } = resume;
 
 export const metadata: Metadata = {
-  // TODO: 배포 도메인이 정해지면 실제 URL로 교체
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://resume.d3h1.com"),
   title: {
     default: `${profile.name} | ${profile.title}`,
     template: `%s | ${profile.name}`,
