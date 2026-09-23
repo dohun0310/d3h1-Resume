@@ -4,7 +4,13 @@ import Section from "@/components/project-detail/section";
 import ScreenshotGrid from "@/components/project-detail/screenshot-grid";
 import Card from "@/components/ui/card";
 
-export default function Detail({ project }: { project: Project }) {
+export default function Detail({
+  project,
+  eagerImages = false,
+}: {
+  project: Project;
+  eagerImages?: boolean;
+}) {
   const contributions = project.contributions ?? [];
   const works = project.works ?? [];
   const responsibilities = project.responsibilities ?? [];
@@ -45,6 +51,7 @@ export default function Detail({ project }: { project: Project }) {
 
                   <div
                     role="progressbar"
+                    data-print="progress-track"
                     aria-label={`${contribution.area} 기여도`}
                     aria-valuenow={percent}
                     aria-valuemin={0}
@@ -52,6 +59,7 @@ export default function Detail({ project }: { project: Project }) {
                     className="h-2 w-full overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800"
                   >
                     <div
+                      data-print="progress-bar"
                       className="h-full rounded-full bg-purple-600 dark:bg-purple-400"
                       style={{ width: `${percent}%` }}
                     />
@@ -155,7 +163,7 @@ export default function Detail({ project }: { project: Project }) {
 
       {screenshots.length > 0 ? (
         <Section title="스크린샷">
-          <ScreenshotGrid screenshots={screenshots} />
+          <ScreenshotGrid screenshots={screenshots} eager={eagerImages} />
         </Section>
       ) : null}
     </div>

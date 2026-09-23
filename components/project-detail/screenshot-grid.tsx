@@ -1,7 +1,13 @@
 import Image from "next/image";
 import type { Screenshot } from "@/lib/types/resume";
 
-export default function ScreenshotGrid({ screenshots }: { screenshots: Screenshot[] }) {
+export default function ScreenshotGrid({
+  screenshots,
+  eager = false,
+}: {
+  screenshots: Screenshot[];
+  eager?: boolean;
+}) {
   if (screenshots.length === 0) return null;
 
   return (
@@ -13,6 +19,7 @@ export default function ScreenshotGrid({ screenshots }: { screenshots: Screensho
               src={shot.src}
               alt={shot.alt}
               fill
+              loading={eager ? "eager" : "lazy"}
               className="object-cover"
               sizes="(max-width: 640px) 100vw, 50vw"
             />
