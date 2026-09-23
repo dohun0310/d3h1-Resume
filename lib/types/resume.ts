@@ -5,6 +5,7 @@ export type Profile = {
   blog: string;
   website: string;
   title: string;
+  summary: string;
   introduction: string;
 }
 

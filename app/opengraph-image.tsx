@@ -10,7 +10,7 @@ export default function OpengraphImage() {
   const { profile } = resume;
 
   return new ImageResponse(
-    <OgCard eyebrow={profile.title} title={profile.name} description={profile.introduction} />,
+    <OgCard eyebrow={profile.title} title={profile.name} description={profile.summary} />,
     { ...size, fonts: ogFonts },
   );
 }

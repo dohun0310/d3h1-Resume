@@ -18,17 +18,17 @@ export const metadata: Metadata = {
     default: `${profile.name} | ${profile.title}`,
     template: `%s | ${profile.name}`,
   },
-  description: profile.introduction,
+  description: profile.summary,
   openGraph: {
     title: `${profile.name} | ${profile.title}`,
-    description: profile.introduction,
+    description: profile.summary,
     type: "website",
     locale: "ko_KR",
   },
   twitter: {
     card: "summary_large_image",
     title: `${profile.name} | ${profile.title}`,
-    description: profile.introduction,
+    description: profile.summary,
   },
 };
 
