@@ -132,10 +132,10 @@ body {
     display: none !important;
   }
 
-  /* 페이지 배경을 화면과 같은 gray-50으로 칠함 */
+  /* 흰 종이와 어울리도록 인쇄할 때는 페이지 배경을 흰색으로 */
   html,
   body {
-    background: #F5F5F5 !important;
+    background: #FFFFFF !important;
   }
 
   /* 배경색과 이미지를 화면 그대로 인쇄 */
