@@ -10,7 +10,7 @@ export const blogProject: Project = {
   },
 
   summary:
-    "개발하면서 배운 내용과 경험을 기록하기 위해 만든 Next.js 기반의 개인 블로그입니다.",
+    "배운 것을 기록하려고 Next.js로 직접 만든 블로그로, Lighthouse 성능 점수를 87점에서 100점으로 올리고 무중단 배포로 운영하고 있습니다.",
 
   role: "기획, 프론트엔드 개발 및 인프라 운영",
 
