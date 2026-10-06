@@ -2,7 +2,7 @@ import type { Project } from "@/lib/types/resume";
 
 export const blogProject: Project = {
   slug: "blog",
-  title: "개인 블로그",
+  title: "d3h1 Blog",
 
   period: {
     start: "2023.04",
@@ -111,14 +111,14 @@ export const blogProject: Project = {
       problem:
         "기존 컨테이너를 새로운 컨테이너로 교체하는 동안 짧게는 1초, 길게는 7초 정도 블로그에 접속할 수 없었습니다.",
       solution:
-        "두 개의 포트를 번갈아 사용하는 Blue/Green 배포 방식을 적용했습니다. 새 컨테이너가 Health Check와 Smoke Test를 통과한 경우에만 Nginx 연결을 변경하도록 구성했습니다.",
+        "두 개의 포트를 번갈아 사용하는 Blue/Green 배포 방식을 적용했습니다. 새 컨테이너가 Health Check를 통과한 경우에만 Nginx 연결을 변경하도록 구성했습니다.",
     },
     {
       title: "Nginx 전환 직후 발생한 요청 실패",
       problem:
         "Nginx upstream을 변경한 직후 기존 컨테이너를 제거했을 때 처리 중이던 연결에서 HTTP 502 오류가 발생했습니다.",
       solution:
-        "Nginx를 다시 불러온 뒤 기존 연결이 끝날 때까지 10초 동안 기다리고, 이후 이전 컨테이너를 제거하도록 수정했습니다.",
+        "Nginx를 다시 불러온 뒤 이전 워커가 기존 연결을 처리할 수 있도록 10초 유예를 둔 뒤, 이전 컨테이너를 제거하도록 수정했습니다.",
     },
   ],
 
