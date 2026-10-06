@@ -63,7 +63,7 @@ export const shuTimetableMasterProject: Project = {
     {
       title: "강좌 검색 API",
       description:
-        "강좌명, 과목코드, 교수, 학과, 전공, 요일, 시간대, 학점으로 강좌를 검색하는 API를 만들었습니다. 조회 응답에는 ETag를 붙여 바뀌지 않은 데이터는 304로 응답합니다.",
+        "강좌명, 과목코드, 교수, 학과, 전공, 요일, 시간대, 학점으로 강좌를 검색하는 API를 만들었습니다. 조회 응답에는 Express의 ETag 설정과 Cache-Control을 적용해 바뀌지 않은 데이터는 304로 응답합니다.",
     },
     {
       title: "시간표 조합 생성",
