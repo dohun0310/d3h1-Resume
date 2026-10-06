@@ -2,7 +2,7 @@ import type { Project } from "@/lib/types/resume";
 
 export const blogProject: Project = {
   slug: "blog",
-  title: "개인 블로그",
+  title: "d3h1 Blog",
 
   period: {
     start: "2023.04",
