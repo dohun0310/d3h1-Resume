@@ -55,6 +55,8 @@ export type Project = {
   title: string;
   period: ProjectPeriod;
   summary: string;
+  featured?: boolean;
+  highlights?: string[];
   role: string;
   overview: string;
   stack: string[];
