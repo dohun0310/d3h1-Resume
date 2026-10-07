@@ -12,6 +12,15 @@ export const blogProject: Project = {
   summary:
     "배운 것을 기록하려고 직접 만든 블로그로, Lighthouse 성능 점수를 87점에서 100점으로 끌어올렸습니다.",
 
+  featured: true,
+
+  highlights: [
+    "Vercel의 긴 빌드와 Cloudflare Workers의 해외 리전 라우팅 문제를 피하려고, OCI 춘천 서버에 Docker로 직접 배포했습니다.",
+    "컨테이너 교체 중 1초에서 7초씩 끊기던 접속을 Nginx Blue/Green 배포로 없애고, 배포 중 연속 요청 2,016회에서 실패 0건을 확인했습니다.",
+    "전환 직후 생긴 502가 이전 워커의 남은 연결 때문이라는 점을 찾아내, 10초 유예를 두어 해결했습니다.",
+    "이미지 크기와 로딩 우선순위를 조정해 Lighthouse 성능 점수를 87점에서 100점으로, LCP를 2.4초에서 0.4초로 개선했습니다.",
+  ],
+
   role: "기획, 프론트엔드 개발 및 인프라 운영",
 
   overview:

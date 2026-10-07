@@ -3,6 +3,7 @@ import { resume } from "@/lib/data/resume";
 import PrintButton from "@/components/print-button";
 import Card from "@/components/ui/card";
 import PageShell from "@/components/page-shell";
+import CompactResume from "@/components/compact-resume";
 import { buttonClassName } from "@/components/ui/button";
 import Profile from "@/components/sections/profile";
 import Introduction from "@/components/sections/introduction";
@@ -22,7 +23,7 @@ export default function Home() {
         </Link>
         <PrintButton />
       </div>
-      <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:py-24">
+      <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:py-24 print:hidden">
         <div className="resume-grid grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-12">
           <Card className="md:col-span-2 lg:col-span-12">
             <Profile profile={profile} />
@@ -44,6 +45,7 @@ export default function Home() {
           </Card>
         </div>
       </main>
+      <CompactResume resume={resume} />
     </PageShell>
   );
 }
