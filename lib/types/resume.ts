@@ -63,6 +63,7 @@ export type Project = {
   responsibilities?: string[];
   challenges?: ProjectChallenge[];
   results?: string[];
+  aiUsage?: string[];
   thumbnail: string;
   screenshots?: Screenshot[];
   links?: ProjectLink[];
