@@ -145,6 +145,11 @@ export const shuTimetableMasterProject: Project = {
     "Jenkins와 Nginx로 프론트엔드, 백엔드 무중단 배포 자동화",
   ],
 
+  aiUsage: [
+    "신한대학교 시간표 마법사 개발 과정에서 AI 에이전트를 설계와 구현에 활용했습니다. 저는 학교 강좌 정보를 시간표 서비스에서 활용하기 위한 요구사항을 정리하고, 데이터 수집 시점과 제공 방식, 개발 도구 및 작업 범위를 지정했습니다.",
+    "예를 들어 DB 없이 빌드 시점에 강좌 데이터를 수집하고 JSON으로 제공하는 구조를 AI와 함께 설계했습니다. AI는 데이터 모델·API 구조와 구현 방안을 제안했고, 저는 요구사항에 맞춰 방향을 조정했습니다. 개발 작업은 하나의 큰 변경으로 처리하지 않고 이슈·PR과 작은 커밋 단위로 나누도록 구성했습니다.",
+  ],
+
   thumbnail: "/projects/shu-timetable-master/thumb.png",
 
   screenshots: [

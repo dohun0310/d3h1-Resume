@@ -16,6 +16,7 @@ export default function Detail({
   const responsibilities = project.responsibilities ?? [];
   const challenges = project.challenges ?? [];
   const results = project.results ?? [];
+  const aiUsage = project.aiUsage ?? [];
   const screenshots = project.screenshots ?? [];
 
   return (
@@ -123,6 +124,12 @@ export default function Detail({
         </Section>
       ) : null}
 
+
+      {aiUsage.length > 0 ? (
+        <Section title="AI 활용">
+          <BulletList items={aiUsage} />
+        </Section>
+      ) : null}
 
       {screenshots.length > 0 ? (
         <Section title="스크린샷">
