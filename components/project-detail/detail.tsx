@@ -30,7 +30,7 @@ export default function Detail({
       />
 
       <Section title="개요">
-        <p className="text-gray-700 dark:text-gray-300">{project.overview}</p>
+        <p className="whitespace-pre-line text-gray-700 dark:text-gray-300">{project.overview}</p>
       </Section>
 
       {contributions.length > 0 ? (
@@ -108,7 +108,7 @@ export default function Detail({
 
                   <div className="flex flex-col gap-1">
                     <span className="text-sm font-semibold text-purple-600 dark:text-purple-300">해결</span>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">{challenge.solution}</p>
+                    <p className="whitespace-pre-line text-sm text-gray-700 dark:text-gray-300">{challenge.solution}</p>
                   </div>
                 </Card>
               </li>
