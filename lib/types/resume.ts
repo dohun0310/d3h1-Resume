@@ -55,6 +55,8 @@ export type Project = {
   title: string;
   period: ProjectPeriod;
   summary: string;
+  featured?: boolean;
+  highlights?: string[];
   role: string;
   overview: string;
   stack: string[];
@@ -63,6 +65,7 @@ export type Project = {
   responsibilities?: string[];
   challenges?: ProjectChallenge[];
   results?: string[];
+  aiUsage?: string[];
   thumbnail: string;
   screenshots?: Screenshot[];
   links?: ProjectLink[];
