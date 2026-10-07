@@ -128,6 +128,11 @@ export const comentorProject: Project = {
     "모바일부터 데스크톱까지 반응형 화면 대응",
   ],
 
+  aiUsage: [
+    "Figma MCP를 활용해 디자이너가 만든 Figma 디자인의 정보를 가져와, 화면을 구현할 때 참고했습니다.",
+    "처음 사용하는 Recharts의 사용 방법을 이해하기 위해 Context7 MCP로 공식 문서를 찾아보며, 레이더 차트와 방사형 차트를 구현했습니다.",
+  ],
+
   thumbnail: "/projects/comentor/thumb.png",
 
   screenshots: [
