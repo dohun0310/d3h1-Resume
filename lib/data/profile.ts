@@ -6,7 +6,7 @@ export const profile: Profile = {
   github: "https://github.com/dohun0310",
   blog: "https://blog.d3h1.com",
   website: "https://resume.d3h1.com",
-  title: "프론트엔드 개발자",
+  title: "소프트웨어 엔지니어",
   summary:
     "직접 겪은 불편을 서비스로 해결하는 프론트엔드 개발자입니다. 시간표 마법사와 d3h1 Blog를 기획부터 배포까지 직접 만들고, 지금도 운영하고 있습니다.",
   introduction:
